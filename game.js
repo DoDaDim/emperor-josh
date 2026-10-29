@@ -2,7 +2,7 @@
 const URL_="https://dodadim.github.io/emperor-josh/";
 const cv=document.getElementById('c'),cx=cv.getContext('2d'),$=id=>document.getElementById(id);
 const IM={};let loaded=0;const names=['background','josh-idle','josh-catch','josh-miss','pint','pint-golden'];
-names.forEach(n=>{const i=new Image();i.onload=()=>{loaded++;if(loaded===names.length)resize();};i.src='assets/'+n+'@2x.png';IM[n]=i;});
+names.forEach(n=>{const i=new Image();i.onload=()=>{loaded++;if(loaded===names.length)resize();};i.src='assets/'+n+'@2x.png?v=87f70bbd';IM[n]=i;});
 let W=0,H=0,DPR=1,bg=null,S=1,floorY=0;
 function resize(){DPR=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;cv.width=W*DPR;cv.height=H*DPR;cx.setTransform(DPR,0,0,DPR,0,0);
  S=Math.min(W/390,H/700);buildBg();}
